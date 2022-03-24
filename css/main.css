@@ -1,0 +1,119 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+  color: #ffffff;
+  font-family: Arial;
+  font-weight: 700;
+}
+body{
+  background: #222222;
+}
+.slider{
+  max-width: 1320px;
+  height: 600px;
+  background: brown;
+  position: relative;
+  margin: 30px auto;
+  overflow: hidden;
+}
+.slider-list{
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+.slider-list__item{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 70px;
+  background: orangered;
+  border: 5px solid green;
+}
+.slider-list__item img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.slider-controller{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  display: flex;
+  justify-content: space-between;
+  top: 0;
+}
+.slider-controller__btn{
+  width: 150px;
+  border: none;
+  outline: none;
+  font-size: 70px;
+  cursor: pointer;
+  transition: text-shadow 0.3s;
+}
+.slider-controller__btn:hover{
+  text-shadow: 0 0 20px #ffffff;
+}
+.prev{
+  background: linear-gradient(90deg, rgb(0, 0, 0), rgba(255, 255, 255, 0));
+}
+.next{
+  background: linear-gradient(270deg, rgb(0, 0, 0), rgba(255, 255, 255, 0));
+}
+.slider-dots{
+  width: 100%;
+  position: absolute;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  column-gap: 20px;
+  bottom: 20px;
+}
+.slider-dots li {
+  width: 20px;
+  height: 20px;
+  border-radius: 20px;
+  background: #ffffff;
+  cursor: pointer;
+  transition: width 0.3s, height 0.3s;
+}
+.slider-dots li.active{
+  width: 40px;
+  height: 10px;
+  background: yellow;
+}
+.progres{
+  max-width: 1320px;
+  width: 100%;
+  height: 20px;
+  margin: 0 auto;
+  padding: 2px;
+  border-radius: 6px;
+  box-sizing: border-box;
+  outline: 2px solid yellow;
+}
+.progres-bar{
+  width: 14.28%;
+  height: 100%;
+  transition: 1s;
+  border-radius: 6px;
+  background: yellow;
+  box-sizing: border-box;
+}
+@media(max-width: 1400px) {
+  .slider{
+    max-width: 850px;
+    height: 400px;
+  }
+  .progres{
+    max-width: 850px;
+    width: 100%;
+    height: 20px;
+  }
+}
