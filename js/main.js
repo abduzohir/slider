@@ -81,7 +81,38 @@ slider.append(ul)
 const sliderDotsLi = document.querySelectorAll('.slider-dots li')
 sliderDotsLi[activeSlide].classList.add('active')
 sliderDotsLi.forEach(function(dot, key){
-  dot.addEventListener('click', function(){controllers(key)})
+  dot.addEventListener('click', function(){
+    controllers(key)
+    if (key == 0) {
+      int = int - int
+      int = int + 14.28
+      progresBar.style = `width: ${int}%;`
+    }else if (key == 1) {
+      int = int - int
+      int = int + 28.56
+      progresBar.style = `width: ${int}%;`
+    }else if (key == 2) {
+      int = int - int
+      int = int + 42.84
+      progresBar.style = `width: ${int}%;`
+    }else if (key == 3) {
+      int = int - int
+      int = int + 57.12
+      progresBar.style = `width: ${int}%;`
+    }else if (key == 4) {
+      int = int - int
+      int = int + 71.40
+      progresBar.style = `width: ${int}%;`
+    }else if (key == 5) {
+      int = int - int
+      int = int + 85.68
+      progresBar.style = `width: ${int}%;`
+    }else if (key == 6) {
+      int = int - int
+      int = int + 99.96
+      progresBar.style = `width: ${int}%;`
+    }
+  })
 })
 let active = true
 function controllers(dotKey){
