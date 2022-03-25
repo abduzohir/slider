@@ -96,33 +96,30 @@ sliderDotsLi.forEach(function(dot, key){
       int = int + 42.84
       progresBar.style = `width: ${int}%;`
     }else if (key == 3) {
-      int = int - int
-      int = int + 57.12
-      progresBar.style = `width: ${int}%;`
+        int = int - int
+        int = int + 57.12
+        progresBar.style = `width: ${int}%;`
     }else if (key == 4) {
-      int = int - int
-      int = int + 71.40
-      progresBar.style = `width: ${int}%;`
+        int = int - int
+        int = int + 71.40
+        progresBar.style = `width: ${int}%;`
     }else if (key == 5) {
-      int = int - int
-      int = int + 85.68
-      progresBar.style = `width: ${int}%;`
+        int = int - int
+        int = int + 85.68
+        progresBar.style = `width: ${int}%;`
     }else if (key == 6) {
-      int = int - int
-      int = int + 99.96
-      progresBar.style = `width: ${int}%;`
+        int = int - int
+        int = int + 99.96
+        progresBar.style = `width: ${int}%;`
     }
+    })
   })
-})
 let active = true
 function controllers(dotKey){
   if(active && dotKey != activeSlide){
     sliderItems.forEach(function(slide){
       slide.style.transition = '0ms'
     })
-    active = false
-    nextBtn.disabled = true
-    prevBtn.disabled = true
     sliderDotsLi.forEach(function(dot){dot.classList.remove('active')})
     let moveLeftOrRight = dotKey > activeSlide ? -moveSlide : moveSlide
     sliderItems[dotKey].style.transform = `translateX(${-moveLeftOrRight}%)`
@@ -135,10 +132,5 @@ function controllers(dotKey){
       sliderItems[activeSlide].style.transition = `${timeMove}ms`
       sliderDotsLi[activeSlide].classList.add('active')    
     }, 100)
-    setTimeout(function(){
-      active = true
-      nextBtn.disabled = false
-      prevBtn.disabled = false
-    },timeMove + 200)
   }
 }
